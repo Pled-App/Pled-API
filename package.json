@@ -7,7 +7,9 @@
         "prestart": "npm run build",
         "start": "nodemon dist/index.js",
         "build": "npx tsc",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "generate": "npm run build && ts-node ./node_modules/typeorm/cli.js migration:generate -p -d src/database/data-source.ts",
+        "migrate": "ts-node ./node_modules/typeorm/cli.js migration:run -d src/database/data-source.ts"
     },
     "author": "",
     "license": "ISC",

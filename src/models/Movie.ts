@@ -15,6 +15,11 @@ export class Movie {
     @Column()
     title: string
 
+    @Column({
+        nullable: true
+    })
+    description: string
+
     @ManyToMany((type) => Genre, (genre) => genre.movies, {
         cascade: true,
     })
