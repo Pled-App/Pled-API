@@ -19,7 +19,7 @@ class MovieService {
         let allMovies = genres[0].movies
 
         for (let i = 1; i < genres.length; i++) {
-            const genreMovies = genres[i].movies
+            const genreMovies = genres[i].movies;
             allMovies = allMovies.filter(
                 ({ id }) =>
                     genreMovies.findIndex((movie) => movie.id === id) > -1

@@ -16,7 +16,7 @@ export class Movie {
     title: string
 
     @Column({
-        nullable: true
+        nullable: true,
     })
     description: string
 
